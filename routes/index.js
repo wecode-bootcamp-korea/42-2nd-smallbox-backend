@@ -1,8 +1,13 @@
 const express = require('express');
-const router = express.Router();
+
+const routes = express.Router();
 
 const movieRouter = require('./movieRouter');
+const userRouter = require('./userRouter');
+const ticketingRouter = require('./ticketingRouter');
 
-router.use('/movies', movieRouter);
+routes.use('/movies', movieRouter);
+routes.use('/users', userRouter);
+routes.use('/ticketings', ticketingRouter);
 
-module.exports = router;
+module.exports = routes;
