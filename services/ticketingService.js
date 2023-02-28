@@ -1,6 +1,16 @@
 const seatDao = require('../models/seatDao');
 const ticketingDao = require('../models/ticketingDao');
 
+const getOptions = async () => {
+  const movies = await ticketingDao.getMovies();
+  const timetables = await ticketingDao.getTimetables();
+
+  return {
+    movies: movies,
+    timetables: timetables,
+  };
+};
+
 const seperateTickets = async (seatId, func) => {
   for (let i = 0; i < seatId.length; i++) {
     await func(seatId[i]);
@@ -51,6 +61,7 @@ const cancelReservedSeat = async (userId, timeTableSeatId) => {
 };
 
 module.exports = {
+  getOptions,
   getSeatsByTimeTableId,
   reserveTicket,
   cancelReservedSeat,

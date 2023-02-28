@@ -5,7 +5,9 @@ const getMovies = async (main, release, sort) => {
 };
 
 const getMovieById = async (movieId) => {
-  return await movieDao.getMovieById(movieId);
+  const result = await movieDao.getMovieById(movieId);
+
+  return result;
 };
 
 module.exports = {
