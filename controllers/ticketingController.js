@@ -1,5 +1,11 @@
+const ticketingService = require('../services/ticketingService');
 const seatService = require('../services/ticketingService');
 const { catchAsync } = require('../utils/error');
+
+const getOptions = catchAsync(async (req, res) => {
+  const options = await ticketingService.getOptions();
+  return res.status(200).json({ options });
+});
 
 const getSeatsByTimeTableId = catchAsync(async (req, res) => {
   const { timeTableId } = req.params;
@@ -33,6 +39,7 @@ const cancelReservedSeat = catchAsync(async (req, res) => {
 });
 
 module.exports = {
+  getOptions,
   getSeatsByTimeTableId,
   cancelReservedSeat,
   reserveTicket,
