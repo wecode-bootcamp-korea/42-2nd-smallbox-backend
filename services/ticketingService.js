@@ -60,9 +60,14 @@ const cancelReservedSeat = async (userId, timeTableSeatId) => {
   await removeTicket();
 };
 
+const getTicketingDetails = async (userId) => {
+  return ticketingDao.getTicketingDetails(userId);
+};
+
 module.exports = {
   getOptions,
   getSeatsByTimeTableId,
   reserveTicket,
   cancelReservedSeat,
+  getTicketingDetails,
 };

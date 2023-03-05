@@ -92,10 +92,48 @@ const deleteTicket = async (timeTableSeatId, userId) => {
   );
 };
 
+const getTicketingDetails = async (userId) => {
+  const rawQuery = `
+    SELECT
+        t.user_id as userId,
+        SUM(ROUND(tt.price-(tt.price*dd.discount_rate))) as totalAmount,
+        JSON_ARRAYAGG(
+            JSON_OBJECT(
+            'timetableTheaterSeatId', ttts.id,
+            'timetableId', ttts.time_table_id,
+            'price', ROUND(tt.price-(tt.price*dd.discount_rate)),
+            'movieId', tt.movie_id,
+            'movieTitle', m.name,
+            'rating', fr.rating,
+            'theaterSeatId', ttts.theater_seat_id,
+            'theaterSeat', CONCAT(ts.seat_row,ts.seat_number),
+            'theaterId', ts.theater_id,
+            'theater', t2.name,
+            'date', tt.table_date,
+            'showingTime', CONCAT(DATE_FORMAT(tt.table_time,'%H:%i'),'-',DATE_FORMAT(ADDTIME(tt.table_time,SEC_TO_TIME(m.running_time*60)),'%H:%i'))
+            )
+        ) as details
+    from ticketings t
+    JOIN time_tables_theater_seats ttts ON ttts.id = t.time_tables_theater_seat_id
+    JOIN time_tables tt ON tt.id = ttts.time_table_id
+    JOIN datetime_discounts dd ON dd.id = tt.datetime_discount_id
+    JOIN theater_seats ts ON ts.id = ttts.theater_seat_id
+    JOIN theaters t2 ON t2.id = ts.theater_id
+    JOIN movies m ON m.id = tt.movie_id
+    JOIN film_ratings fr ON fr.id = m.film_rating_id
+    WHERE t.user_id = ?
+    GROUP BY t.user_id
+    ORDER BY userId;
+    `;
+
+  return appDataSource.query(rawQuery, userId);
+};
+
 module.exports = {
   getMovies,
   getTimetables,
   getSeatsByTimeTableId,
   reserveTicket,
   deleteTicket,
+  getTicketingDetails,
 };

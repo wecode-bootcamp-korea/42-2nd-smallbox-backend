@@ -38,9 +38,20 @@ const cancelReservedSeat = catchAsync(async (req, res) => {
   return res.status(200).json({ message: 'TICKET CANCEL SUCCESSFULLY' });
 });
 
+const getTicketingDetails = catchAsync(async (req, res) => {
+  const userId = req.user;
+
+  if (!userId) throw new Error('keyErr');
+
+  const ticketingDetails = await ticketingService.getTicketingDetails(userId);
+
+  return res.status(200).json({ ticketingDetails });
+});
+
 module.exports = {
   getOptions,
   getSeatsByTimeTableId,
   cancelReservedSeat,
   reserveTicket,
+  getTicketingDetails,
 };
