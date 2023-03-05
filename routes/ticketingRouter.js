@@ -17,5 +17,6 @@ router.patch(
   validateToken,
   ticketingController.cancelReservedSeat
 );
+router.get('/details', validateToken, ticketingController.getTicketingDetails);
 
 module.exports = router;
