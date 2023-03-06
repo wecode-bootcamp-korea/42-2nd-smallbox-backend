@@ -32,7 +32,7 @@ const kakaoLogin = async (kakaoToken) => {
   };
 
   const jwtAccessToken = (Object, statusCode) => {
-    response.accessToken = jwt.sign({ Object }, process.env.JWT_SECRET, {
+    response.accessToken = jwt.sign(Object, process.env.JWT_SECRET, {
       algorithm: process.env.ALGORITHM,
       expiresIn: process.env.JWT_EXPIRES_IN,
     });
