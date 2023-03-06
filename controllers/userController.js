@@ -3,6 +3,7 @@ const { catchAsync } = require('../utils/error');
 
 const kakaoLogin = catchAsync(async (req, res) => {
   const kakaoToken = req.headers.authorization;
+
   if (!kakaoToken) {
     const err = new Error('missingAuthCode');
     err.statusCode = 401;

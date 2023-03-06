@@ -63,7 +63,20 @@ const createKakaoUser = async (
   );
 };
 
+const getUserBySocialId = async (kakaoId) => {
+  return await appDataSource.query(
+    `
+    SELECT  
+    id as userId
+    FROM users
+    WHERE social_id =?
+      `,
+    [kakaoId]
+  );
+};
+
 module.exports = {
   checkRegisteredAlready,
   createKakaoUser,
+  getUserBySocialId,
 };
