@@ -5,6 +5,7 @@ const getMovies = async (main, release, sort) => {
     const sortType = Object.freeze({
       openingAsc: 'ORDER BY m.opening_date ASC',
       openingDesc: 'ORDER BY m.opening_date DESC',
+      bookingRateDesc: 'ORDER BY m.reservation_rate DESC',
     });
 
     const rawQuery = `
@@ -13,6 +14,7 @@ const getMovies = async (main, release, sort) => {
       m.english_name as movieNameInEnglish,
       m.simple_description as movieSimpleDescription,
       m.thumbnail_image_url as movieThumbnailImageUrl,
+      m.reservation_rate as bookingRate,
       DATE_FORMAT(m.opening_date, '%Y-%m-%d') as movieOpeningDate,
       fr.rating as filmAgeRating,
       keyword.movieKeyword as movieKeyword
@@ -46,7 +48,7 @@ const getMovieById = async (movieId) => {
       m.english_name AS movieNameInEnligh,
       m.simple_description as movieSimpleDescription,
       m.detail_description as movieDetailDescription,
-      m.thumbnail_image_url as movieTumbNailImg,
+      m.thumbnail_image_url as movieThumbNailImg,
       DATE_FORMAT(m.opening_date, '%Y-%m-%d') as movieOpeningDate,
       fr.rating AS movieAgeRating,
       m.running_time as movieRunningTime,
@@ -55,7 +57,7 @@ const getMovieById = async (movieId) => {
       d.name AS director,
       actors.movieActors,
       keyword.movieKeyword,
-      genre.moiveGenre,
+      genre.movieGenre,
       movieStillCuts.movieStillCut,
       movieTrailers.movieTrailer
     FROM movies m
@@ -76,7 +78,7 @@ const getMovieById = async (movieId) => {
         mg.movie_id,
         JSON_ARRAYAGG(
           g.genre
-        ) AS moiveGenre
+        ) AS movieGenre
         FROM movies_genres mg 
         INNER JOIN genres g ON mg.genre_id = g.id
         GROUP BY mg.movie_id

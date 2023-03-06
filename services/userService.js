@@ -14,7 +14,7 @@ const kakaoLogin = async (kakaoToken) => {
     }
   );
 
-  const userId = getKakaoUserData.data.id;
+  const kakaoId = getKakaoUserData.data.id;
   const { profile_image: profileImage, nickname } =
     getKakaoUserData.data.properties;
   const {
@@ -24,7 +24,7 @@ const kakaoLogin = async (kakaoToken) => {
     birthday,
   } = getKakaoUserData.data.kakao_account;
 
-  const isExist = await userDao.checkRegisteredAlready(userId);
+  const isExist = await userDao.checkRegisteredAlready(kakaoId);
 
   const response = {
     accessToken: '',
@@ -39,10 +39,11 @@ const kakaoLogin = async (kakaoToken) => {
     response.statusCode = statusCode;
     return [response.accessToken, response.statusCode];
   };
+  const [userId] = await userDao.getUserBySocialId(kakaoId);
 
   if (!isExist) {
     await userDao.createKakaoUser(
-      userId,
+      kakaoId,
       email,
       profileImage,
       nickname,
@@ -51,9 +52,9 @@ const kakaoLogin = async (kakaoToken) => {
       gender
     );
 
-    jwtAccessToken({ id: userId }, 201);
+    jwtAccessToken({ userId: kakaoId }, 201);
   } else {
-    jwtAccessToken({ id: isExist.social_id }, 200);
+    jwtAccessToken({ userId: userId.userId }, 200);
   }
 
   return response;
