@@ -27,8 +27,9 @@ const getTimetables = async () => {
       m.id as movieId,
       tt.id as timetableId,
       DATE_FORMAT(tt.table_date, '%Y-%m-%d') as date,
-      tt.table_time as time,
-      SUM(CASE WHEN tss.name  = ${seatStatus.AVAILABLE} THEN 1 ELSE 0 END) as availableSeats,
+      DATE_FORMAT(tt.table_time, '%H:%i') as startTime,
+      DATE_FORMAT(ADDTIME(tt.table_time,SEC_TO_TIME(m.running_time*60)),'%H:%i') as endTime,
+      SUM(CASE WHEN tss.id = ${seatStatus.AVAILABLE} THEN 1 ELSE 0 END) as availableSeats,
       COUNT(ts.id) as totalSeats
     FROM time_tables_theater_seats ttts
     JOIN theater_seat_status tss ON tss.id = ttts.theater_seat_status_id
