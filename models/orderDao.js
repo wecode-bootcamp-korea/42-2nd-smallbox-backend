@@ -1,4 +1,3 @@
-const { raw } = require('mysql2');
 const appDataSource = require('./dataSource');
 
 const orderStatus = Object.freeze({
@@ -7,7 +6,7 @@ const orderStatus = Object.freeze({
   canceled: 3,
 });
 
-const createOrder = async (paymentData, userId) => {
+const createOrder = async (paymentData, userId, orderNumber) => {
   const { aid, tid, payment_method_type: paymentType, quantity } = paymentData;
   const {
     total: totalAmount,
@@ -39,6 +38,7 @@ const createOrder = async (paymentData, userId) => {
       INSERT INTO orders (
         user_id,
         tid,
+        order_number,
         quantity,
         total_amount,
         tax_free_amount,
@@ -50,10 +50,19 @@ const createOrder = async (paymentData, userId) => {
         ?,
         ?,
         ?,
+        ?,
         ?
       )
       `,
-      [userId, tid, quantity, totalAmount, taxFree, orderStatus.completed]
+      [
+        userId,
+        tid,
+        orderNumber,
+        quantity,
+        totalAmount,
+        taxFree,
+        orderStatus.completed,
+      ]
     );
 
     const [orderId] = await queryRunner.query(
@@ -72,7 +81,7 @@ const createOrder = async (paymentData, userId) => {
     for (let i = 0; i < ticketInfo.seatList.length; i++) {
       orderItemList.push([Number(orderId.lastOrderId), ticketInfo.seatList[i]]);
     }
-
+    console.log(orderItemList);
     await queryRunner.query(rawOrderItemsQuery, [orderItemList]);
 
     await queryRunner.query(
@@ -128,6 +137,7 @@ const createOrder = async (paymentData, userId) => {
     await queryRunner.commitTransaction();
     await queryRunner.release();
   } catch (err) {
+    console.log(err);
     await queryRunner.rollbackTransaction();
     await queryRunner.release();
 
