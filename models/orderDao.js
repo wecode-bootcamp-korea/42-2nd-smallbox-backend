@@ -144,36 +144,37 @@ const createOrder = async (paymentData, userId, orderNumber) => {
   }
 };
 
-const getOrder = async (userId, orderNumber) => {
+const getOrder = async (orderNumber) => {
   const rawQuery = `
-    SELECT 
-        oi.id as orderItemId,
-        oi.order_id as orderId,
-        o.user_id as userId,
-        m.name as movieTitle,
-        m.thumbnail_image_url as thumbnailUrl,
-        t.name as theater,
-        fr.rating as filmRating,
-        DATE_FORMAT(tt.table_date, '%Y-%m-%d') as movieDate,
-        DATE_FORMAT(tt.table_time, '%H:%i') as movieTime,
-        CONCAT(ts.seat_row, ts.seat_number) as theaterSeat,
-        (o.total_amount - ROUND(o.total_amount*cd.discount_rate) - ROUND(o.total_amount*dd.discount_rate)) as paymentAmount,
-        ROUND(o.total_amount*cd.discount_rate) as couponDiscountAmount,
-        ROUND(o.total_amount*dd.discount_rate) as datetimeDiscountAmount
-    FROM order_items oi
-    JOIN orders o ON o.id = oi.order_id
-    JOIN time_tables_theater_seats ttts ON ttts.id = oi.time_table_theater_seat_id
-    JOIN time_tables tt ON tt.id = ttts.time_table_id
-    JOIN theater_seats ts ON ts.id = ttts.theater_seat_id
-    JOIN theaters t ON t.id = ts.theater_id
-    JOIN movies m ON m.id = tt.movie_id
-    JOIN coupon_discounts cd ON cd.id = o.coupon_discount_id
-    JOIN datetime_discounts dd ON dd.id = tt.datetime_discount_id
-    JOIN film_ratings fr ON fr.id = m.film_rating_id
-    WHERE o.user_id = ? AND o.order_number = ?;
-    `;
+  SELECT
+    o.order_number as orderNumber,
+    m.name as movieTitle,
+    m.thumbnail_image_url as movieImg,
+    t.name as theaterName,
+    fr.rating as filmRating,
+    DATE_FORMAT(tt.table_date,'%Y-%m-%d') as movieDate,
+    DATE_FORMAT(tt.table_time, '%H:%i') as movieTime,
+    o.quantity as ticketCount,
+    ROUND(o.total_amount) as totalAmount,
+    JSON_ARRAYAGG(
+    JSON_OBJECT(
+      'timetableseatId', ttts.id,
+      'seat', CONCAT(ts.seat_row, ts.seat_number)
+    )) as seatDetails
+  FROM orders o
+  JOIN order_items oi ON oi.order_id = o.id
+  JOIN time_tables_theater_seats ttts ON ttts.id = oi.time_table_theater_seat_id
+  JOIN time_tables tt ON tt.id = ttts.time_table_id
+  JOIN theater_seats ts ON ts.id = ttts.theater_seat_id
+  JOIN movies m ON m.id = tt.movie_id
+  JOIN theaters t ON t.id = ts.theater_id
+  JOIN film_ratings fr ON fr.id = m.film_rating_id
+  WHERE o.order_number = ?
+  GROUP BY o.order_number, m.name, m.thumbnail_image_url, t.name, fr.rating, tt.table_date, tt.table_time, o.quantity, o.total_amount;
+  `;
 
-  return appDataSource.query(rawQuery, [userId, orderNumber]);
+  const result = await appDataSource.query(rawQuery, orderNumber);
+  return result;
 };
 
 module.exports = {

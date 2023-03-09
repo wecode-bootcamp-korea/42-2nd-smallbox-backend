@@ -11,12 +11,11 @@ const createOrder = catchAsync(async (req, res) => {
 });
 
 const getOrder = catchAsync(async (req, res) => {
-  const userId = req.user;
   const { orderNumber } = req.query;
 
-  if (!userId && !orderNumber) throw new Error('keyErr');
+  if (!orderNumber) throw new Error('keyErr');
 
-  const orders = await orderService.getOrder(userId, orderNumber);
+  const orders = await orderService.getOrder(orderNumber);
 
   return res.status(200).json(orders);
 });
