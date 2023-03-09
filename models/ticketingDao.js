@@ -54,9 +54,11 @@ const getSeatsByTimeTableId = async (timeTableId) => {
           "timeTableSeatId", ttts.id,
           "seatStatusId", ttts.theater_seat_status_id,
           "status", tss.name
-      )) as seatStatus 
+      )) as seatStatus ,
+      CONCAT(ts.seat_row, ts.seat_number) AS seats
     FROM time_tables_theater_seats ttts
     INNER JOIN theater_seat_status tss ON tss.id=ttts.theater_seat_status_id
+    INNER JOIN theater_seats ts ON ts.id = ttts.theater_seat_id
     WHERE ttts.time_table_id=?
     GROUP BY ttts.time_table_id, ttts.id
     ORDER BY ttts.time_table_id, ttts.id ASC;
