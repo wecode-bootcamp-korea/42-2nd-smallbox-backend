@@ -10,6 +10,18 @@ const createOrder = catchAsync(async (req, res) => {
   return res.status(200).json({ orderNumber });
 });
 
+const getOrder = catchAsync(async (req, res) => {
+  const userId = req.user;
+  const { orderNumber } = req.query;
+
+  if (!userId && !orderNumber) throw new Error('keyErr');
+
+  const orders = await orderService.getOrder(userId, orderNumber);
+
+  return res.status(200).json(orders);
+});
+
 module.exports = {
   createOrder,
+  getOrder,
 };
