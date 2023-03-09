@@ -7,4 +7,8 @@ const createOrder = async (paymentData, userId) => {
   return orderNumber;
 };
 
-module.exports = { createOrder };
+const getOrder = async (userId, orderNumber) => {
+  return orderDao.getOrder(userId, orderNumber);
+};
+
+module.exports = { createOrder, getOrder };

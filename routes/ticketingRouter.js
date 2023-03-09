@@ -5,7 +5,6 @@ const { validateToken } = require('../middlewares/auth');
 
 const router = express.Router();
 
-router.get('', ticketingController.getOptions);
 router.get('/:timeTableId', ticketingController.getSeatsByTimeTableId);
 router.post(
   '/seats/reservation',
@@ -18,5 +17,6 @@ router.patch(
   ticketingController.cancelReservedSeat
 );
 router.get('/details', validateToken, ticketingController.getTicketingDetails);
+router.get('', ticketingController.getOptions);
 
 module.exports = router;
