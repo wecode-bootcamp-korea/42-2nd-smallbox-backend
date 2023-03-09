@@ -19,7 +19,8 @@
     "jsonwebtoken": "^9.0.0",
     "morgan": "^1.10.0",
     "mysql2": "^3.1.2",
-    "typeorm": "^0.3.12"
+    "typeorm": "^0.3.12",
+    "uuid4": "^2.0.3"
   },
   "devDependencies": {
     "jest": "^29.4.3",
