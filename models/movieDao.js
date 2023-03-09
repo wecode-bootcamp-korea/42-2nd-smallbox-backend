@@ -10,6 +10,7 @@ const getMovies = async (main, release, sort) => {
 
     const rawQuery = `
     SELECT
+      m.id,
       m.name as movieName,
       m.english_name as movieNameInEnglish,
       m.simple_description as movieSimpleDescription,
@@ -17,7 +18,8 @@ const getMovies = async (main, release, sort) => {
       m.reservation_rate as bookingRate,
       DATE_FORMAT(m.opening_date, '%Y-%m-%d') as movieOpeningDate,
       fr.rating as filmAgeRating,
-      keyword.movieKeyword as movieKeyword
+      keyword.movieKeyword as movieKeyword,
+      movieTrailers.movieTrailer
     FROM movies m
     INNER JOIN film_ratings fr ON fr.id = m.film_rating_id
     INNER JOIN (
@@ -30,6 +32,16 @@ const getMovies = async (main, release, sort) => {
       INNER JOIN  movie_keywords mk ON mmk.movie_keyword_id = mk.id
       GROUP BY mmk.movie_id
     ) keyword ON m.id = keyword.movie_id
+    LEFT JOIN (
+      SELECT
+        mo.id,
+        JSON_ARRAYAGG(
+          mv.video_url 
+        ) AS movieTrailer 
+        FROM movies mo 
+        INNER JOIN movie_videos mv ON mv.movie_id = mo.id
+        GROUP BY mv.movie_id 
+      ) movieTrailers ON m.id = movieTrailers.id
     ${release ? 'WHERE DATE(m.opening_date) < DATE(NOW())' : ''}
     ${sortType[sort] ? sortType[sort] : 'ORDER BY m.opening_date DESC'}
     ${main ? 'LIMIT 5' : ''}
@@ -44,6 +56,7 @@ const getMovieById = async (movieId) => {
   try {
     const rawQuery = `
     SELECT
+      m.id,
       m.name AS movieName,
       m.english_name AS movieNameInEnligh,
       m.simple_description as movieSimpleDescription,

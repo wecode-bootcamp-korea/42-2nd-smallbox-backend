@@ -5,9 +5,9 @@ const createOrder = catchAsync(async (req, res) => {
   const { paymentData } = req.body;
   const userId = req.user;
 
-  await orderService.createOrder(paymentData, userId);
+  const orderNumber = await orderService.createOrder(paymentData, userId);
 
-  return res.status(201).json({ message: 'YOUR ORDER IS COMPLETED!!' });
+  return res.status(200).json({ orderNumber });
 });
 
 module.exports = {
