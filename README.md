@@ -1,5 +1,5 @@
+![image](https://user-images.githubusercontent.com/122417190/224232282-517808fa-3ecf-42f1-9e01-5f49a2f5f3dd.png)
 
-![image](https://user-images.githubusercontent.com/122417190/224227001-e41c431b-66f3-4b16-a7c9-bbe5d24547b3.png)
 # 🎥 <i>small box</i>
 ## 스몰박스 소개 
 <b>다양한 장르</b>의 영화를 상영하는 CGV 홈페이지를 모티브로,<br>
@@ -23,7 +23,7 @@
 
 ## 기술 스택
 
-Frond-End
+Front-End
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=white">
 <img src="https://img.shields.io/badge/React.js-61DAFB?style=flat&amp;logo=React&amp;logoColor=white">
 <img src="https://img.shields.io/badge/styled-components-DB7093?style=flat&amp;logo=styled-components-DB7093&amp;logoColor=white">
@@ -33,9 +33,9 @@ Back-End
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=white">
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat&amp;logo=Node.js&amp;logoColor=white">
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&amp;logo=MySQL&amp;logoColor=white">
-<img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=flat&amp;logo=AWS_EC2 Code&amp;logoColor=white">
-<img src="https://img.shields.io/badge/AWS_RDS-527FFF?style=flat&amp;logo=AWS_RDS Code&amp;logoColor=white">
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&amp;logo=Docker Code&amp;logoColor=white">
+<img src="https://img.shields.io/badge/Amazon%20EC2-FF9900?style=flat&amp;logo=Amazon%20EC2&logoColor=white">
+<img src="https://img.shields.io/badge/AWS_RDS-527FFF?style=flat&amp;logo=Amazon RDS&amp;logoColor=white">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&amp;logo=Docker&amp;logoColor=white">
 
 Common
 <img src="https://img.shields.io/badge/Git-F05032?style=flat&amp;logo=Git&amp;logoColor=white">
@@ -43,14 +43,14 @@ Common
 <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat&amp;logo=prettier&amp;logoColor=white">
 <img src="https://img.shields.io/badge/RestfulAPI-F7533E?style=flat&amp;logo=RestfulAPII&amp;logoColor=white">
 <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&amp;logo=Visual Studio Code&amp;logoColor=white">
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&amp;logo=Postman Code&amp;logoColor=white">
-<img src="https://img.shields.io/badge/KakaoAPI-FFCD00?style=flat&amp;logo=Kakao Code&amp;logoColor=white">
-
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&amp;logo=Postman&amp;logoColor=white">
+<img src="https://img.shields.io/badge/KakaoAPI-FFCD00?style=flat&amp;logo=Kakao&amp;logoColor=white">
 
 Communication
 <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&amp;logo=Slack&amp;logoColor=white">
 <img src="https://img.shields.io/badge/Trello-0052CC?style=flat&amp;logo=Trello&amp;logoColor=white">
 <img src="https://img.shields.io/badge/Notion-000000?style=flat&amp;logo=Notion&amp;logoColor=white">
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=white">
 
 <br>
 
@@ -72,19 +72,26 @@ Communication
 
 
 
-## 구현기능 소개
+### 메인페이지
 ![gifit_1678424105746](https://user-images.githubusercontent.com/122417190/224231423-2d501713-3255-4eb4-b5aa-0c45625843a6.gif)
 <br>
+
+### 로그인
 ![gifit_1678424262207](https://user-images.githubusercontent.com/122417190/224231425-e1bd5d20-3726-4524-a91c-3f51d24eff9c.gif)
 <br>
+### 로그인
 ![gifit_1678424355772](https://user-images.githubusercontent.com/122417190/224231431-21383314-8a21-4b9f-b98b-6ccfc54b0e09.gif)
 <br>
+### 로그인
 ![gifit_1678424490243](https://user-images.githubusercontent.com/122417190/224231433-afd9af58-e249-4479-9e17-0bca5c9481df.gif)
 <br>
+### 로그인
 ![gifit_1678424614118](https://user-images.githubusercontent.com/122417190/224231434-608db4d2-ff52-43d8-9bbd-ef0c527f73c7.gif)
 <br>
+### 로그인
 ![gifit_1678424786928](https://user-images.githubusercontent.com/122417190/224231435-a1cac1b2-6871-42d9-bff0-2a697ed88c54.gif)
 <br>
+### 로그인
 ![gifit_1678424873989](https://user-images.githubusercontent.com/122417190/224231439-b141dcb7-f474-457d-bf8c-e4cdadc6bf9a.gif)
 <br>
 ![gifit_1678424927723](https://user-images.githubusercontent.com/122417190/224231440-9ca0eb00-d061-48b8-9a0f-aea5c2ac6d16.gif)
