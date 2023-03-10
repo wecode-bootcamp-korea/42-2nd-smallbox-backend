@@ -9,9 +9,18 @@
 <br>
 
 ## 프로젝트 정보
-- <b>프로젝트 기간</b>: 2023/02/24 ~ 2023/03/10 (약 2주)
-- <b>프론트엔드</b>: [이해인 (Product Manager)](https://github.com/sunny-inn), [김수현](https://github.com/laralina), [방서빈](https://github.com/seobinbang7)
-- <b>백엔드</b>: [강신혜 (Project Manager)](https://github.com/ksh0123), [장주성](https://github.com/jangjuseong), [김은경](https://github.com/Silver-bell11)
+### 프로젝트 기간
+2023/02/24 ~ 2023/03/10 (약 2주)
+<br>
+### Front-end
+| 이해인 | 김수현 | 방서빈 |
+| :-- | :-- | :-- |
+[<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/sunny-inn) | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/laralina) | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/seobinbang7) |
+
+### Back-end
+| 강신혜 | 장주성 | 김은경 |
+| :-- | :-- | :-- |
+[<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/ksh0123) | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/jangjuseong) | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/Silver-bell11) |
 
 <br>
 
