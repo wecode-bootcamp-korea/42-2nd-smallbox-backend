@@ -71,7 +71,7 @@ Communication
 <br>
 
 ## <i>small box</i> ERD
-#TODO
+![image](https://user-images.githubusercontent.com/122417190/224250949-51196592-0462-43c3-9593-105072a44be1.png)
 
 <br>
 
