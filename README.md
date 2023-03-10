@@ -117,7 +117,7 @@ Communication
 ### 극장페이지
 ![gifit_1678424786928](https://user-images.githubusercontent.com/122417190/224231435-a1cac1b2-6871-42d9-bff0-2a697ed88c54.gif)
 <br>
-### 예매하기
+### 예매페이지 및 결제
 ![gifit_1678425359776](https://user-images.githubusercontent.com/122417190/224231444-440122f8-1a84-42f6-98a1-9bde5d0208fa.gif)
 ![gifit_1678425714130](https://user-images.githubusercontent.com/122417190/224231445-29cba9de-2c0c-4f32-beb5-12df421d9a6e.gif)
 ![gifit_1678425947575](https://user-images.githubusercontent.com/122417190/224231446-035358f5-c24b-4a38-a1f4-e89a978777a0.gif)
