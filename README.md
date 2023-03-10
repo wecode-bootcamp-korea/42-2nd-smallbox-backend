@@ -9,9 +9,9 @@
 <br>
 
 ## 프로젝트 정보
-- 프로젝트 기간: 2023/02/06 ~ 2023/02/17 (약 2주)
-- 프론트엔드: [이해인 (Product Manager)](https://github.com/sunny-inn), [김수현](https://github.com/laralina), [방서빈](https://github.com/seobinbang7)
-- 백엔드: [강신혜 (Project Manager)](https://github.com/ksh0123), [장주성](https://github.com/jangjuseong), [김은경](https://github.com/Silver-bell11)
+- <b>프로젝트 기간</b>: 2023/02/24 ~ 2023/03/10 (약 2주)
+- <b>프론트엔드</b>: [이해인 (Product Manager)](https://github.com/sunny-inn), [김수현](https://github.com/laralina), [방서빈](https://github.com/seobinbang7)
+- <b>백엔드</b>: [강신혜 (Project Manager)](https://github.com/ksh0123), [장주성](https://github.com/jangjuseong), [김은경](https://github.com/Silver-bell11)
 
 <br>
 
@@ -24,20 +24,18 @@
 ## 기술 스택
 
 Frond-End
-<img src="https://img.shields.io/badge/Javscript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=white">
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>styled-components</title><path d="M16.214 6.762l-.075.391c-.116.741-.074.953.244 1.228l.307.254-.318 1.418c-.19.846-.423 1.555-.571 1.788-.127.201-.275.497-.307.656-.053.19-.233.381-.508.55-.243.138-.72.508-1.058.805-.27.243-.456.392-.557.456l-.33.261c-.106.17-.166.307-.189.411-.023.107-.01.178.024.23.033.05.09.085.168.107a.954.954 0 00.282.023 3 3 0 00.632-.112c.07-.019.125-.037.173-.053.074-.091.245-.263.548-.562.804-.793 1.111-1.227.794-1.11-.117.042-.064-.064.137-.276.424-.413.667-1.037 1.175-2.994.402-1.545.402-1.567.698-1.567.139 0 .532.024.532.024V6.762h-.902zm3.839 3.165c-.064 0-.17.096-.233.202-.116.19.021.306 1.767 1.396 1.037.657 1.873 1.217 1.852 1.26-.021.031-.868.582-1.883 1.217-1.842 1.142-1.852 1.153-1.683 1.386.212.275 0 .37 2.391-1.122L24 13.155v-.836l-1.937-1.196c-1.047-.656-1.957-1.185-2.01-1.196zm-16.085.117c-.053 0-.963.54-2.01 1.185L0 12.425v.836l1.947 1.217c1.08.666 1.99 1.217 2.032 1.217.042 0 .127-.096.212-.212.127-.201.02-.286-1.768-1.418C.72 12.996.54 12.848.71 12.732c.106-.074.91-.572 1.778-1.111 1.979-1.217 1.873-1.133 1.714-1.387-.063-.105-.17-.2-.233-.19zm8.684.023c-.292-.002-.92.443-2.8 1.978-.081.193-.088.326-.051.412.024.059.068.1.129.13.06.03.138.048.224.055.171.015.373-.012.536-.044l.11-.025a.386.386 0 01.144-.118c.116-.064.603-.508 1.09-.984.857-.868 1.058-1.26.709-1.387a.24.24 0 00-.09-.017zm2.196.603c-.257.007-.72.305-1.513.938-.398.323-.65.497-.785.533l-.524.414c-.197.36-.226.583-.174.706a.25.25 0 00.138.134.644.644 0 00.24.045 2.18 2.18 0 00.58-.085 3.466 3.466 0 00.291-.092l.029-.012.053-.028c.1-.129.33-.372.618-.652.91-.878 1.375-1.502 1.28-1.735-.043-.113-.117-.17-.233-.166zm-2.424 1.08c-.074.008-.24.136-.539.398-.432.382-.903.602-1.066.504a3.97 3.97 0 01-.114.024c-.166.033-.373.06-.558.045a.708.708 0 01-.252-.063.337.337 0 01-.168-.17c-.037-.09-.037-.202.005-.345l-.65.534-1.471 1.217V15.867l4.82-3.797a.41.41 0 01.016-.123c.037-.134.035-.202-.023-.196zm2.074.639c-.073 0-.195.103-.39.31-.265.283-.682.557-.903.613l-.034.018a2.191 2.191 0 01-.11.042c-.06.02-.138.044-.228.068-.18.049-.404.094-.604.089a.732.732 0 01-.275-.054.344.344 0 01-.184-.18c-.058-.139-.035-.334.092-.611L7.61 16.033v1.205h1.868l3.962-3.112c.103-.114.258-.27.467-.465.56-.519.687-.698.687-.963 0-.206-.023-.31-.096-.31zm.943 1.95l-.339.338c-.19.18-.529.402-.761.497l-.046.02-.003.005-.01.01c-.009.007-.013.008-.02.011a3.432 3.432 0 01-.282.093 3.058 3.058 0 01-.65.115 1.035 1.035 0 01-.31-.027.364.364 0 01-.218-.144c-.048-.074-.062-.173-.035-.295a1.11 1.11 0 01.095-.25l-3.197 2.526h4.252l.508-.582c.698-.814 1.016-1.396 1.016-1.894z"/></svg>
+<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=white">
 <img src="https://img.shields.io/badge/React.js-61DAFB?style=flat&amp;logo=React&amp;logoColor=white">
-<img src="https://img.shields.io/badge/sass-CC6699?style=flat&amp;logo=sass&amp;logoColor=white">
+<img src="https://img.shields.io/badge/styled-components-DB7093?style=flat&amp;logo=styled-components-DB7093&amp;logoColor=white">
 <img src="https://img.shields.io/badge/React Router-CA4245?style=flat&amp;logo=ReactRouter&amp;logoColor=white">
 
 Back-End
+<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=white">
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat&amp;logo=Node.js&amp;logoColor=white">
-<img src="https://img.shields.io/badge/Nodemon-76D04B?style=flat&amp;logo=Nodemon&amp;logoColor=white">
-<img src="https://img.shields.io/badge/Express-000000?style=flat&amp;logo=Express&amp;logoColor=white">
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&amp;logo=MySQL&amp;logoColor=white">
-<img src="https://img.shields.io/badge/JWT-CC6699?style=flat&amp;logo=JSON&amp;logoColor=white">
-<img src="https://img.shields.io/badge/Dbmate-009DC7?style=flat&amp;logo=Bcrypt&amp;logoColor=white">
-<img src="https://img.shields.io/badge/Bcrypt-CA424?style=flat&amp;logo=Bcrypt&amp;logoColor=white">
+<img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=flat&amp;logo=AWS_EC2 Code&amp;logoColor=white">
+<img src="https://img.shields.io/badge/AWS_RDS-527FFF?style=flat&amp;logo=AWS_RDS Code&amp;logoColor=white">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&amp;logo=Docker Code&amp;logoColor=white">
 
 Common
 <img src="https://img.shields.io/badge/Git-F05032?style=flat&amp;logo=Git&amp;logoColor=white">
@@ -46,6 +44,8 @@ Common
 <img src="https://img.shields.io/badge/RestfulAPI-F7533E?style=flat&amp;logo=RestfulAPII&amp;logoColor=white">
 <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&amp;logo=Visual Studio Code&amp;logoColor=white">
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&amp;logo=Postman Code&amp;logoColor=white">
+<img src="https://img.shields.io/badge/KakaoAPI-FFCD00?style=flat&amp;logo=Kakao Code&amp;logoColor=white">
+
 
 Communication
 <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&amp;logo=Slack&amp;logoColor=white">
@@ -54,14 +54,52 @@ Communication
 
 <br>
 
-## <i>small box</i> flow
+## <i>small box</i> FLOW
 ![image](https://user-images.githubusercontent.com/122417190/224229588-3112a7a4-0484-48be-aaeb-0ee669c6f3f2.png)
 
+<br>
+
+## <i>small box</i> ERD
+
 
 <br>
-👁️ 목표 구현 기능 : 회원가입, 로그인, 장바구니, 결제(포인트)
 
 <br>
+
+## MVP SCOPE
+
+<br>
+
+
+
+## 구현기능 소개
+![gifit_1678424105746](https://user-images.githubusercontent.com/122417190/224231423-2d501713-3255-4eb4-b5aa-0c45625843a6.gif)
+<br>
+![gifit_1678424262207](https://user-images.githubusercontent.com/122417190/224231425-e1bd5d20-3726-4524-a91c-3f51d24eff9c.gif)
+<br>
+![gifit_1678424355772](https://user-images.githubusercontent.com/122417190/224231431-21383314-8a21-4b9f-b98b-6ccfc54b0e09.gif)
+<br>
+![gifit_1678424490243](https://user-images.githubusercontent.com/122417190/224231433-afd9af58-e249-4479-9e17-0bca5c9481df.gif)
+<br>
+![gifit_1678424614118](https://user-images.githubusercontent.com/122417190/224231434-608db4d2-ff52-43d8-9bbd-ef0c527f73c7.gif)
+<br>
+![gifit_1678424786928](https://user-images.githubusercontent.com/122417190/224231435-a1cac1b2-6871-42d9-bff0-2a697ed88c54.gif)
+<br>
+![gifit_1678424873989](https://user-images.githubusercontent.com/122417190/224231439-b141dcb7-f474-457d-bf8c-e4cdadc6bf9a.gif)
+<br>
+![gifit_1678424927723](https://user-images.githubusercontent.com/122417190/224231440-9ca0eb00-d061-48b8-9a0f-aea5c2ac6d16.gif)
+<br>
+![gifit_1678425106746](https://user-images.githubusercontent.com/122417190/224231442-2abd5aae-f1cf-4382-9d8f-5e0dc1ead5fd.gif)
+<br>
+![gifit_1678425359776](https://user-images.githubusercontent.com/122417190/224231444-440122f8-1a84-42f6-98a1-9bde5d0208fa.gif)
+<br>
+![gifit_1678425714130](https://user-images.githubusercontent.com/122417190/224231445-29cba9de-2c0c-4f32-beb5-12df421d9a6e.gif)
+<br>
+![gifit_1678425947575](https://user-images.githubusercontent.com/122417190/224231446-035358f5-c24b-4a38-a1f4-e89a978777a0.gif)
+
+
+<br>
+
 
 ### 💾 back-end
 
