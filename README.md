@@ -31,8 +31,9 @@
 - [Back-end repository](https://github.com/wecode-bootcamp-korea/42-2nd-smallbox-backend)
 
 <br>
+
 ## API Documentation
-(https://documenter.getpostman.com/view/25414601/2s93JqRQcf)
+[smallbox postman link](https://documenter.getpostman.com/view/25414601/2s93JqRQcf)
 
 <br>
 
